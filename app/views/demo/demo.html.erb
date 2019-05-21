@@ -1,10 +1,14 @@
 <div id="app" data-controller="demo">
-  <button> Launch demo</button>
+  <ol>
+    <li><button data-action="click->demo#launchDemo">Daniel</button></li>
+    <li><button data-action="click->demo#launchDemo">Caleb</button></li>
+  </ol>
 
-  <div class="modal">
+  <div class="modal" data-target="demo.modal" data-controller="modal">
     <div class="modal-dialog">
       <div class="modal-content">
         This is a modal
+        <button data-action="click->modal#close">Close</button>
       </div>
     </div>
   </div>
