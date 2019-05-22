@@ -9,10 +9,14 @@ export default class extends Controller {
 
   launchDemo(event) {
     let modalController = this.application.getControllerForElementAndIdentifier(this.modalTarget, "modal");
+    let cohostController = this.application.getControllerForElementAndIdentifier(this.modalTarget, "cohost");
+
+    cohostController.setCoHostContent(event.currentTarget.dataset);
     modalController.open();
 
-    console.log(event.currentTarget);
+
   }
+
 
 
 }

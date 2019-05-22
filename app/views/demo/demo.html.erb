@@ -1,13 +1,15 @@
 <div id="app" data-controller="demo">
   <ol>
-    <li><button data-action="click->demo#launchDemo">Daniel</button></li>
-    <li><button data-action="click->demo#launchDemo">Caleb</button></li>
+    <li><button data-action="click->demo#launchDemo" data-name="Marvin" data-email="daniel@yahoo.com" data-title="Daddy">Daniel</button></li>
+    <li><button data-action="click->demo#launchDemo" data-name="Booom" data-email="booom@yahoo.com" data-title="bamm">Caleb</button></li>
   </ol>
 
-  <div class="modal" data-target="demo.modal" data-controller="modal">
+  <div class="modal" data-target="demo.modal" data-controller="modal cohost">
     <div class="modal-dialog">
       <div class="modal-content">
-        This is a modal
+        <h2 data-target="cohost.name"></h2>
+        <span data-target="cohost.title"></span>
+        <a data-target="cohost.email" href=""></a>
         <button data-action="click->modal#close">Close</button>
       </div>
     </div>
