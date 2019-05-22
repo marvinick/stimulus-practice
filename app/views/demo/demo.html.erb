@@ -15,3 +15,12 @@
     </div>
   </div>
 </div>
+
+<div >
+
+  <%= form_for @comment do |form| %>
+    <%= form.text_area :post  %>
+    <%= form.submit "Post Comment" %>
+  <% end %>
+
+</div>

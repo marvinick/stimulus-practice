@@ -1,4 +1,6 @@
 class DemoController  < ApplicationController
   def demo
-  end 
+    @comments = Comment.all
+    @comment = Comment.new(comment_params)
+  end
 end

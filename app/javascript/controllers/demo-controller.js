@@ -13,10 +13,5 @@ export default class extends Controller {
 
     cohostController.setCoHostContent(event.currentTarget.dataset);
     modalController.open();
-
-
   }
-
-
-
 }
