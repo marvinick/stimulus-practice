@@ -1,4 +1,20 @@
-<%= form_for @comment do |form| %>
-  <%= form.text_area :post  %>
-  <%= form.submit "Post Comment" %>
-<% end %>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="comment-list" data-controller="comment">
+     <ul class="comments-list"  data-target="comment.commentList">
+        <%= render @comments %>
+     </ul>
+    </div>
+    <br>
+    <br>
+    <%= form_for Comment.new, html: { data: { type: "html", action: "ajax:success->comment#onPostSuccess" } } do |form|  %>
+      <%= form.text_area :post, data: { target: "comment.post" }  %>
+      <br>
+      <br>
+      <%= form.submit "Post Comment" %>
+    <% end %>
+  </div>
+</div>

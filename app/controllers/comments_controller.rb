@@ -1,15 +1,12 @@
 class CommentsController < ApplicationController
-  def new
-  end
 
   def create
     @comment = Comment.create(comment_params)
+    render @comment
   end
 
   def index
-    @comment = Comment.new
     @comments = Comment.all
-
   end
 
   private
@@ -18,3 +15,4 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:post)
   end
 end
+ 
